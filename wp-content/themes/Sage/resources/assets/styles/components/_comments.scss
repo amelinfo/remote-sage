@@ -1,23 +1,30 @@
 .comment-list {
-  @extend .list-unstyled;
+  padding-left: 0;
+  list-style: none;
 }
 
 .comment-list ol {
   list-style: none;
 }
 
+.comment-form label {
+  @extend .label;
+}
+
 .comment-form p {
-  @extend .form-group;
+  @extend .field;
 }
 
 .comment-form input[type="text"],
 .comment-form input[type="email"],
-.comment-form input[type="url"],
+.comment-form input[type="url"] {
+  @extend .input;
+}
+
 .comment-form textarea {
-  @extend .form-control;
+  @extend .textarea;
 }
 
 .comment-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-secondary;
+  @extend .button, .is-info;
 }

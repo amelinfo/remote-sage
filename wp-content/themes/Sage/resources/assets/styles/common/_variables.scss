@@ -1,6 +1,5 @@
-/** Import Bootstrap functions */
-@import "~bootstrap/scss/functions";
+/** Colors */
+$primary:               #525ddc;
 
-$theme-colors: (
-  primary: #525ddc
-);
+/** Box Model  */
+$spacer:                2rem;

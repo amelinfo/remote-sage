@@ -13,7 +13,7 @@
 /wp-content/plugins/hello.php
 /wp-admin/
 /wp-includes/
-
+/wp-content/themes/Sage/vendor/
 /.htaccess
 /license.txt
 /readme.html
