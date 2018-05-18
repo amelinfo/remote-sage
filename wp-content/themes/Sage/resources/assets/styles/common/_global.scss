@@ -1,0 +1,17 @@
+//@import "media";
+
+.hidden {
+  display: none;
+}
+
+.no-border {
+  border: none;
+}
+
+@media only screen and (min-width: $M) {
+  .columns {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+  }
+}

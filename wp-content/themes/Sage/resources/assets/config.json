@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "style": [
+      "./scripts/style.js"
     ]
   },
   "publicPath": "/wp-content/themes/sage",

@@ -1,0 +1,47 @@
+@import "media";
+
+.map_content {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#map_container {
+  position: relative;
+}
+
+#map {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 22.25%;
+  padding-top: 30px;
+  position: relative;
+
+  @include MQ(M) {
+    height: 400px;
+  }
+
+  @include MQ(L) {
+    height: 600px;
+  }
+}
+
+#cd-zoom-in,
+#cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: rgba($red, 0.9);
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-controller.svg');
+
+  .no-touch &:hover {
+    background-color: rgba($red, 1);
+  }
+
+  @include MQ(M) {
+    margin-left: 50px;
+  }
+}
