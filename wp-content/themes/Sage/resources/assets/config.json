@@ -9,6 +9,10 @@
     ],
     "style": [
       "./scripts/style.js"
+    ],
+    "slick": [
+      "./scripts/slick.js",
+      "./scripts/slick.css"
     ]
   },
   "publicPath": "/wp-content/themes/sage",
