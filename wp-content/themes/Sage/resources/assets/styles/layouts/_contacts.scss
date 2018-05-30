@@ -1,12 +1,13 @@
 @import "media";
 
-.map_content {
+.map_content,
+.map2_content {
   width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
 }
 
-#map_container {
+#map_container,
+#map2_container {
   position: relative;
 }
 
@@ -23,6 +24,22 @@
 
   @include MQ(L) {
     height: 600px;
+  }
+}
+
+#map2 {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 22.25%;
+  padding-top: 30px;
+  position: relative;
+
+  @include MQ(M) {
+    height: 400px;
+  }
+
+  @include MQ(L) {
+    height: 500px;
   }
 }
 
@@ -44,4 +61,24 @@
   @include MQ(M) {
     margin-left: 50px;
   }
+}
+
+.widget-title {
+  display: block;
+  margin: 0 0 20px;
+  font-size: 1.077em;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000;
+}
+
+.contact3-info-widget div {
+  padding-left: 2.308em;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact3-info-widget p {
+  margin: 0;
 }

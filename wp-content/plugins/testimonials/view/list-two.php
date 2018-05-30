@@ -1,5 +1,5 @@
 <?php
-$tm = '<section class="testimonials-list style-'.$style.'">' . "\n";
+$tm = '<section class="testimonials-list style-'.$style.' columns">' . "\n";
 $counter = 1;
 while( $testimonials->have_posts() ): $testimonials->the_post();
   $name = the_title('<div class="tm_author author-name vcard"><em>', '</em></div>', false);
@@ -7,7 +7,7 @@ while( $testimonials->have_posts() ): $testimonials->the_post();
   $web_url = get_post_meta(get_the_ID(), '_website', true);
   $web_url_text = ( get_post_meta(get_the_ID(), '_website_text', true) != '' ) ? get_post_meta(get_the_ID(), '_website_text', true) : $web_url;
   
-  $tm .= '<article class="testimonials-'.get_the_ID().' testimonials">' . "\n";
+  $tm .= '<article class="testimonials-'.get_the_ID().' testimonials column">' . "\n";
   $tm .= '<div class="testimonials-content">' . apply_filters('the_content', get_the_content()) . '</div>' . "\n";
   $tm .= '<div class="testimonials-meta">' . "\n";
   if( has_post_thumbnail()){

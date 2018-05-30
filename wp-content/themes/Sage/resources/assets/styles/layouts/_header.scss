@@ -1,3 +1,25 @@
 .banner .nav li {
   @extend .nav-item;
 }
+
+.mega-menu-wrap {
+  z-index: 10000;
+}
+
+#mega-menu-wrap-primary_navigation #mega-menu-primary_navigation li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row,
+#mega-menu-wrap-primary_navigation #mega-menu-primary_navigation > li.mega-menu-megamenu > ul.mega-sub-menu {
+  width: auto !important;
+}
+
+header.slider {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 999;
+}
+
+header.slider nav#navigation {
+  background: transparent;
+}

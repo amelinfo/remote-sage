@@ -1,4 +1,73 @@
-//@import "media";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.full-width {
+  width: 100%;
+}
+
+::selection {
+  color: #fff;
+  background-color: #70b85d;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  display: inline-block;
+  color: #777;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1em;
+  line-height: 1.65;
+  max-width: 100%;
+  border: 1px solid #eee;
+  background: #f7f7f7;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-offset: none;
+}
+
+.full-width-input input,
+.full-width-input textarea,
+.full-width-input select {
+  width: 100%;
+  max-width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// .full-width-input select {
+//   border: none;
+//   height: 2.4rem;
+//   border-radius: 0;
+// }
+
+:focus {
+  outline: none;
+}
 
 .hidden {
   display: none;
@@ -8,10 +77,44 @@
   border: none;
 }
 
+.is-chocolat {
+  background-color: $chocolat !important;
+}
+
+.is-chocolat:hover {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+.text-centred {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-centred {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: $M) {
   .columns {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     margin-top: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: $L) {
+  .flex-center-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

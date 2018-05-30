@@ -254,6 +254,7 @@ class MySettingsPage
 		register_setting( 'testimonials_settings', 'testimonial_slider_style' );
 		register_setting( 'testimonials_settings', 'testimonial_order' );
 		register_setting( 'testimonials_settings', 'testimonial_orderby');
+		register_setting( 'testimonials_settings', 'testimonial_bgr');
 		register_setting( 'testimonials_settings', 'testimonial_thumb');
 		register_setting( 'testimonials_settings', 'testimonial_limit');
 		register_setting( 'testimonials_settings', 'slide_show_speed');
@@ -291,7 +292,7 @@ class MySettingsPage
 		?>
 	<div class="wrap">
       <form action="options.php" method="post">
-			<h1> Testimonail Options</h1>
+			<h1> Testimonial Options</h1>
 			<br/>
         <?php
           settings_fields( 'testimonials_settings' );
@@ -309,8 +310,13 @@ class MySettingsPage
                     </label>
                 </td>
 			</tr>
+			<tr valign="top">
+				<th scope="row">Background Color</th>
+				<td><input type="text" name="testimonial_bgr" value="<?php echo esc_attr( get_option('testimonial_bgr') ); ?>" /></td>
+			</tr>
+        
 			<tr>
-                <th>Testimonial Order</th>
+                <th>Order</th>
                 <td>
 				<select name="testimonial_order">
 					<option value="">&mdash; select &mdash;</option>
@@ -320,7 +326,7 @@ class MySettingsPage
 	           </td>
 			<!-- </tr>
 			<tr> -->
-                <th>Testimonial OrderBy</th>
+                <th>OrderBy</th>
                 <td>
 				<select name="testimonial_orderby">
                         <option value="">&mdash; select &mdash;</option>
@@ -332,7 +338,7 @@ class MySettingsPage
                 </td>
 			</tr>
 			<tr>
-                <th>Testimonial Thumb Size</th>
+                <th>Thumb Size</th>
                 <td>
 				<select name="testimonial_thumb">
                         <option value="">&mdash; select &mdash;</option>
@@ -343,14 +349,14 @@ class MySettingsPage
                 </td>
 			<!-- </tr>
 			<tr> -->
-                <th>Testimonial Limit</th>
+                <th>Limit</th>
                 <td>
 				<input type="number" name="testimonial_limit" value="-1" min="-1"><br/>
                 </td>
 			</tr>
 			
 			<tr class="list-row">
-                <th>Testimonial List Style</th>
+                <th>List Style</th>
                 <td>
                     <select name="testimonial_list_style">
                         <option value="">&mdash; select &mdash;</option>
@@ -361,7 +367,7 @@ class MySettingsPage
                 </td>
             </tr>
 			<tr class="slider-row">
-                <th>Testimonial Slider Style</th>
+                <th>Slider Style</th>
                 <td>
                     <select name="testimonial_slider_style">
                         <option value="">&mdash; select &mdash;</option>
@@ -436,15 +442,16 @@ class MySettingsPage
 		tr.slider-row.active {
 		display: contents !important;
 		}
+	
 	</style>
 	<script>
+
 	// jQuery(function(){
    if(jQuery( 'input[name="testimonial_view"]:checked' ).val() === 'list'){
 	  jQuery("tr.list-row").addClass("active");
    }else{
 	jQuery("tr.slider-row").addClass("active");
    }
-  
 
   jQuery(".testimonial-type").on("change", function(){
 	  var value= jQuery( 'input[name="testimonial_view"]:checked' ).val();

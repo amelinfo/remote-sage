@@ -65,6 +65,12 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('customize-selective-refresh-widgets');
 
+
+    add_theme_support( 'custom-logo', array(
+        'height'      => 175,
+        'width'       => 400,
+        'flex-width' => true,
+     ) );
     /**
      * Use main stylesheet for visual editor
      * @see resources/assets/styles/layouts/_tinymce.scss
@@ -130,4 +136,3 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
-
