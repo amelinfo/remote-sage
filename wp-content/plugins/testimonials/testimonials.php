@@ -1,14 +1,12 @@
 <?php
 /*
   Plugin Name: Testimonials
-  Plugin URI: http://pwdtechnology.com/testimonials-plugin-for-wordpress-site/
   Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your Testimonial or to encourage readers to subscribe / buy your products.
-  Author: Chinmoy Paul (chinmoy29)
-  Author URI: http://www.pwdtechnology.com/
-  Version: 3.0.1
+  Author: Techlab TN
+  Author URI: http://www.techlab.tn/
+  Version: 9.9.9
 */
   
-// Copyright (c) 2010-2104 Chinmoy Paul. All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php
