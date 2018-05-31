@@ -1,0 +1,58 @@
+footer.content-info {
+  background-color: #18253c;
+  color: #a9afb1;
+}
+
+footer.content-info h3 {
+  display: block;
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+}
+
+footer.content-info a {
+  color: $primary;
+}
+
+footer.content-info ul {
+  margin: 0;
+  list-style: none;
+}
+
+footer.content-info li {
+  border-color: #333;
+}
+
+.widget_recent_entries .post-date,
+.ctwg-recent-item .ctwg-recent-meta {
+  color: #a9afb1;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  line-height: 26px;
+  display: block;
+}
+
+.textwidget p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#footer {
+  background-color: #18253c;
+  border-top: 1px solid #a9afb1;
+  padding: 10px 0;
+  color: #eee;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px 0 30px;
+  clear: both;
+  text-align: center;
+}

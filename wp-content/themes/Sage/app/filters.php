@@ -68,3 +68,19 @@ add_filter('comments_template', function ($comments_template) {
     );
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
 }, 100);
+
+add_filter('dynamic_sidebar_params', function ($params) {
+
+    $sidebar_id = $params[0]['id'];
+
+    if ( $sidebar_id == 'sidebar-footer' ) {
+
+        $total_widgets = wp_get_sidebars_widgets();
+        $sidebar_widgets = count($total_widgets[$sidebar_id]);
+
+        $params[0]['before_widget'] = str_replace('<section class="widget ', '<section class="widget column ', $params[0]['before_widget']);
+    }
+
+    return $params;
+
+}, 100);
